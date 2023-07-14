@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import supabase from "../Services/supabaseClient";
+import supabase from "./Services/supabaseClient";
 import '../App.css';
 import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

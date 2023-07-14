@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import supabase from "../Services/supabaseClient";
+import supabase from "./Services/supabaseClient";
 const Login = () => {
  const [state, setState] = useState({ email: "", password: "" });
  const navigate = useNavigate();

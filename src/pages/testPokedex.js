@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import supabase from '../Services/supabaseClient';
+import supabase from './Services/supabaseClient';
 import Navbar from "./Navbar";
 
 function Pokedex() {
