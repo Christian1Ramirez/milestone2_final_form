@@ -73,7 +73,7 @@ const CardBundles = () => {
     fetchUser();
   }, []);
 
-  const handleLogin = async (username, password) => {
+  const handleLogin = async (username: any, password: any) => {
     try {
       const response = await fetch("/login", {
         method: "POST",

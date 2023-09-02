@@ -12,13 +12,13 @@ function Home() {
   };
 
   // CHANGES BACKGROUND COLOR AND TRANSLATES BOX UPON HOVER
-  const hoverEffect = (event) => {
+  const hoverEffect = (event: { target: { style: { backgroundColor: string; transform: string; }; }; }) => {
     event.target.style.backgroundColor = "#FFA500";
     event.target.style.transform = "translateY(-15px)";
   };
 
   // SETS EVERYTHING BACK TO THE DEFAULT
-  const hoverEffectLeave = (event) => {
+  const hoverEffectLeave = (event: { target: { style: { backgroundColor: string; transform: string; }; }; }) => {
     event.target.style.backgroundColor = "transparent";
     event.target.style.transform = "translateY(0)";
   };

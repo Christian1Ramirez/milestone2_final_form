@@ -113,6 +113,7 @@ const Navbar = () => {
        </li>
        <li className="nav-item">
         <Link
+        to="#"
          className="nav-link"
          onClick={handleLogout}
          style={{

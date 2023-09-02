@@ -7,7 +7,7 @@ function Pokedex() {
   const [search, setSearch] = useState('');
   const [team, setTeam] = useState([]);
 
-  const fetchPokemon = async (searchTerm) => {
+  const fetchPokemon = async (searchTerm: string) => {
     console.log("Fetching Pokemon with term: ", searchTerm);
     let { data: pokemonStats, error } = await supabase
       .from('pokemon_stats')
@@ -21,7 +21,7 @@ function Pokedex() {
     }
   };
 
-  const handleSearch = (event) => {
+  const handleSearch = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSearch(event.target.value);
   };
 
@@ -29,15 +29,15 @@ function Pokedex() {
     fetchPokemon(search);
   };
 
-  const removeFromTeam = (pokemon) => {
+  const removeFromTeam = (pokemon: never) => {
     setTeam((prevTeam) => prevTeam.filter((item) => item !== pokemon));
   };
 
-  const isPokemonInTeam = (pokemon) => {
+  const isPokemonInTeam = (pokemon: never) => {
     return team.some((item) => item.Name === pokemon.Name);
   };
 
-  const addToTeam = (pokemon) => {
+  const addToTeam = (pokemon: never) => {
     if (team.length >= 6) {
       alert('Team is already full!');
       return;
